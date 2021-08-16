@@ -15,6 +15,7 @@ import React from "react";
 import { createStyles, makeStyles } from "@material-ui/core";
 import DateRangeIcon from "@material-ui/icons/DateRange";
 import TrendingUpIcon from "@material-ui/icons/TrendingUp";
+import { LevelSkills } from "../Skills/LevelSkills";
 
 const useStyles = makeStyles((theme) =>
   createStyles({
@@ -22,6 +23,15 @@ const useStyles = makeStyles((theme) =>
       "& p": {
         fontSize: "18px",
       },
+      "& .MuiDialogTitle-root": {
+        padding: "0px 24px",
+      },
+    },
+    title: {
+      fontSize: "20px",
+      display: "flex",
+      alignContent: "center",
+      justifyContent: "space-between",
     },
     infoDetails: {
       fontSize: "20px",
@@ -49,37 +59,13 @@ const useStyles = makeStyles((theme) =>
   })
 );
 
-const LinearProgressWithLabel = (props) => {
-  return (
-    <Box display="flex" alignItems="center">
-      <Box minWidth={35}>
-        <Typography
-          variant="body2"
-          color="textSecondary"
-          style={{ paddingRight: "1rem" }}
-        >{`Bajo`}</Typography>
-      </Box>
-      <Box width="100%" mr={1}>
-        <LinearProgress
-          variant="determinate"
-          {...props}
-          style={{ height: "10px", borderRadius: "100%" }}
-        />
-      </Box>
-      <Box minWidth={35}>
-        <Typography variant="body2" color="textSecondary">{`Alto`}</Typography>
-      </Box>
-    </Box>
-  );
-};
-
 export const ReactInfoDialog = ({ open, close }) => {
   const classes = useStyles();
   return (
     <Dialog
       onClose={close}
       open={open}
-      maxWidth="lg"
+      maxWidth="md"
       className={classes.content}
     >
       <DialogTitle>
@@ -93,6 +79,8 @@ export const ReactInfoDialog = ({ open, close }) => {
         >
           <CloseIcon />
         </IconButton>
+      </DialogTitle>
+      <DialogContent classes={{ root: classes.custDialogContent }}>
         <p>
           Llevo aprendiendo y aplicando conocimientos en React desde Febrero del
           2020, a la fecha sigo con él y la verdad, es que es mi punto más
@@ -100,13 +88,9 @@ export const ReactInfoDialog = ({ open, close }) => {
           gustaría seguir aprendiendolo y poniendolo en práctica en soluciones
           que ameriten su uso.
         </p>
-      </DialogTitle>
-      <DialogContent classes={{ root: classes.custDialogContent }}>
         <Grid container spacing={4}>
-          <Grid item xs={6} md={2} style={{ fontSize: "20px" }}>
-            <span>
-              <DateRangeIcon />
-            </span>{" "}
+          <Grid item xs={6} md={2} className={classes.title}>
+            <DateRangeIcon />
             <spanc>Tiempo</spanc>:
           </Grid>
           <Grid item xs={6} md={10}>
@@ -114,16 +98,12 @@ export const ReactInfoDialog = ({ open, close }) => {
               Desde Febrero del 2020 a la actualidad
             </span>
           </Grid>
-          <Grid item xs={6} md={12} style={{ fontSize: "20px" }}>
-            <span>
-              <TrendingUpIcon />
-            </span>{" "}
-            <span>Nivel:</span>
+          <Grid item xs={6} md={2} className={classes.title}>
+            <TrendingUpIcon />
+            <span>Nivel</span>:
           </Grid>
-          <Grid item xs={12} md={12} style={{ textAlign: "center" }}>
-            {/* <Grid item xs={6} md={10} style={{textAlign: 'center'}}> */}
-            <span className={classes.infoDetails}>Medio</span>
-            <LinearProgressWithLabel value={50} />
+          <Grid item xs={6} md={10}>
+            <LevelSkills full={3} empty={2} />
           </Grid>
         </Grid>
       </DialogContent>

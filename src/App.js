@@ -3,7 +3,7 @@ import { SnackbarProvider } from "notistack";
 import { MainColor } from "./components/Utils/MainColor";
 import React from "react";
 import { Home } from "./views/Home";
-import "./app.css";
+import "./App.css";
 
 export const App = () => {
   return (

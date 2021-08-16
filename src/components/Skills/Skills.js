@@ -5,7 +5,13 @@ import RailsIcon from "../../assets/icons/rails.png";
 import AngularIcon from "../../assets/icons/angular.svg";
 import NodeIcon from "../../assets/icons/node.svg";
 import React, { useState } from "react";
-import { AngularInfoDialog, NodeInfoDialog, RailsInfoDialog, ReactInfoDialog, SpringInfoDialog } from "..";
+import {
+  AngularInfoDialog,
+  NodeInfoDialog,
+  RailsInfoDialog,
+  ReactInfoDialog,
+  SpringInfoDialog,
+} from "..";
 
 const useStyles = makeStyles(() =>
   createStyles({
@@ -16,6 +22,8 @@ const useStyles = makeStyles(() =>
       display: "flex",
       alignItems: "center",
       justifyContent: "space-between",
+      maxWidth: '100%',
+      overflow: 'auto'
     },
     img: {
       maxHeight: "150px",
@@ -70,7 +78,7 @@ export const Skills = () => {
           <img
             src={ReactIcon}
             className={classes.img}
-            alt='React'
+            alt="React"
             onClick={() => handleOpenDialog("react")}
           />
         </p>
@@ -78,7 +86,7 @@ export const Skills = () => {
           <img
             src={NodeIcon}
             className={classes.img}
-            alt='Node'
+            alt="Node"
             onClick={() => handleOpenDialog("node")}
           />
         </p>
@@ -86,7 +94,7 @@ export const Skills = () => {
           <img
             src={SpringIcon}
             className={classes.img}
-            alt='Spring'
+            alt="Spring"
             onClick={() => handleOpenDialog("spring")}
           />
         </p>
@@ -94,7 +102,7 @@ export const Skills = () => {
           <img
             src={AngularIcon}
             className={classes.img}
-            alt='Angular'
+            alt="Angular"
             onClick={() => handleOpenDialog("angular")}
           />
         </p>
@@ -102,31 +110,16 @@ export const Skills = () => {
           <img
             src={RailsIcon}
             className={classes.img}
-            alt='Rails'
+            alt="Rails"
             onClick={() => handleOpenDialog("rails")}
           />
         </p>
       </div>
-      <ReactInfoDialog
-        open={react}
-        close={handleCloseDialog}
-      />
-      <NodeInfoDialog
-        open={node}
-        close={handleCloseDialog}
-      />
-      <SpringInfoDialog
-        open={spring}
-        close={handleCloseDialog}
-      />
-      <AngularInfoDialog
-        open={angular}
-        close={handleCloseDialog}
-      />
-      <RailsInfoDialog
-        open={rails}
-        close={handleCloseDialog}
-      />
+      <ReactInfoDialog open={react} close={handleCloseDialog} />
+      <NodeInfoDialog open={node} close={handleCloseDialog} />
+      <SpringInfoDialog open={spring} close={handleCloseDialog} />
+      <AngularInfoDialog open={angular} close={handleCloseDialog} />
+      <RailsInfoDialog open={rails} close={handleCloseDialog} />
     </div>
   );
 };
