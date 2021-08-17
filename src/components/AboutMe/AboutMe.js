@@ -31,9 +31,9 @@ export const AboutMe = () => {
             desarrollo de software.
           </p>
           <p className={classes.text}>
-            Me encanta mi profesión y los desaos que ella conlleva. En mis empos
+            Me encanta mi profesión y los desafíos que ella conlleva. En mis tiempos
             libres me gusta ver series, películas, anime, jugar videojuegos,
-            reír y también , perfeccionarme en lo hago a través del aprendizaje
+            reír y también, perfeccionarme en lo hago a través del aprendizaje
             constante de nuevas herramientas.
           </p>
         </Grid>
