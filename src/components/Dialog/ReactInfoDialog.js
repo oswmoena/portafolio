@@ -1,5 +1,4 @@
 import {
-  Box,
   Button,
   Dialog,
   DialogActions,
@@ -7,9 +6,7 @@ import {
   DialogTitle,
   Grid,
   IconButton,
-  Typography,
 } from "@material-ui/core";
-import LinearProgress from "@material-ui/core/LinearProgress";
 import CloseIcon from "@material-ui/icons/Close";
 import React from "react";
 import { createStyles, makeStyles } from "@material-ui/core";

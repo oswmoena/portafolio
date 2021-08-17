@@ -1,6 +1,6 @@
 import React from "react";
 import { createStyles, Grid, makeStyles } from "@material-ui/core";
-import ProfileImage from '../../assets/images/perfil.jpeg'
+import ProfileImage from "../../assets/images/perfil.jpeg";
 
 const useStyles = makeStyles(() =>
   createStyles({
@@ -8,13 +8,13 @@ const useStyles = makeStyles(() =>
       fontSize: "20px",
     },
     profileImg: {
-      borderRadius: '100%',
-      maxHeight: '300px',
+      borderRadius: "100%",
+      maxHeight: "300px",
     },
     gridImg: {
-      textAlign: 'center',
-      overflow:'hidden'
-    }
+      textAlign: "center",
+      overflow: "hidden",
+    },
   })
 );
 
@@ -31,15 +31,18 @@ export const AboutMe = () => {
             desarrollo de software.
           </p>
           <p className={classes.text}>
-            Me encanta mi profesión, me gustan los desafíos que esto conlleva y
-            el alcance de la misma, me gusta ver series, peliculas, animé, jugar
-            videojuegos y reir, también me gusta aprender herramientas nuevas
-            que ayuden a perfeccionarme en lo que hago.
+            Me encanta mi profesión y los desaos que ella conlleva. En mis empos
+            libres me gusta ver series, películas, anime, jugar videojuegos,
+            reír y también , perfeccionarme en lo hago a través del aprendizaje
+            constante de nuevas herramientas.
           </p>
         </Grid>
         <Grid item xs={12} md={4} className={classes.gridImg}>
-          <img src={ProfileImage}
-            alt='Oswall Moena' className={classes.profileImg} />
+          <img
+            src={ProfileImage}
+            alt="Oswall Moena"
+            className={classes.profileImg}
+          />
         </Grid>
       </Grid>
     </div>

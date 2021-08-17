@@ -23,7 +23,7 @@ const useStyles = makeStyles(() =>
       alignItems: "center",
       justifyContent: "space-between",
       maxWidth: '100%',
-      overflow: 'auto'
+      overflow: 'auto',
     },
     img: {
       maxHeight: "150px",
@@ -36,7 +36,6 @@ const useStyles = makeStyles(() =>
         transition: "0.5s",
         backgroundColor: "white",
         borderRadius: "15%",
-        transform: "scale(1.2,1.2)",
         zIndex: 9,
       },
     },
