@@ -1,22 +1,46 @@
+import React from "react";
 import {
-  Button,
   Container,
   createStyles,
-  Grid,
-  makeStyles,
-  TextField,
   Typography,
+  makeStyles,
+  Grid,
 } from "@material-ui/core";
-import { FormikProvider, useFormik } from "formik";
-import React from "react";
+import gmail from "../../assets/icons/gmail.png";
+import linkedin from "../../assets/icons/linkedin.png";
+import github from "../../assets/icons/github.png";
 
 const useStyles = makeStyles(() =>
   createStyles({
     container: {
-      padding: "3%",
+      //   padding: "3%",
     },
     title: {
-      fontFamily: 'Lato'
+      fontFamily: "Lato",
+      paddingBottom: "5%",
+    },
+    subTitle: {
+      fontFamily: "Lato",
+      display: "flex",
+      justifyContent: "center",
+      alignContent: "center",
+      alignItems: "center",
+      "& :link": {
+        color: "#000000",
+        textDecoration: "none",
+      },
+      "& :visited": {
+        color: "#000000",
+        textDecoration: "none",
+      },
+      "& :hover": {
+        color: "#000000",
+        textDecoration: "none",
+      },
+    },
+    img: {
+      width: "8%",
+      padding: "3%",
     },
   })
 );
@@ -24,68 +48,35 @@ const useStyles = makeStyles(() =>
 export const Contact = () => {
   const classes = useStyles();
 
-  const formik = useFormik({
-    initialValues: {
-      fullName: "",
-      email: "",
-      message: "",
-    },
-    onSubmit: (values) => {
-      console.log(`values`, values);
-    },
-  });
-
   return (
-    <FormikProvider value={formik}>
-      <Container maxWidth="sm">
-        <Grid container spacing={2} justify="space-between">
-          <Grid item xs={12} md={12}>
-            <Typography component="h3" variant="h3" className={classes.title}>
-              Contacto
-            </Typography>
-          </Grid>
-          <Grid item xs={12} md={12}>
-            <TextField
-              id={"fullName"}
-              name={"fullName"}
-              label={"Nombre Completo"}
-              variant={"outlined"}
-              fullWidth
-              onChange={formik.handleChange}
-              value={formik.values.fullName}
-            />
-          </Grid>
-          <Grid item xs={12} md={12}>
-            <TextField
-              id={"email"}
-              name={"email"}
-              label={"E-mail"}
-              variant={"outlined"}
-              fullWidth
-              onChange={formik.handleChange}
-              value={formik.values.email}
-            />
-          </Grid>
-          <Grid item xs={12} md={12}>
-            <TextField
-              id={"message"}
-              name={"message"}
-              label={"Mensaje"}
-              variant={"outlined"}
-              multiline
-              rows={4}
-              fullWidth
-              onChange={formik.handleChange}
-              value={formik.values.message}
-            />
-          </Grid>
-          <Grid item xs={12} md={12}>
-            <Button variant='contained' fullWidth color='primary' >
-              {'Enviar'}
-            </Button>
-          </Grid>
+    <div>
+      <Typography component="h3" variant="h3" className={classes.title}>
+        {"Contacto"}
+      </Typography>
+      <Grid container spacing={3} justify="space-between">
+        <Grid item xs={12} md={4}>
+          <div className={classes.subTitle}>
+            <img src={gmail} className={classes.img} />
+            {"oswmoena@gmail.com"}
+          </div>
         </Grid>
-      </Container>
-    </FormikProvider>
+        <Grid item xs={12} md={4}>
+          <div className={classes.subTitle}>
+            <img src={linkedin} className={classes.img} />
+            <a href="https://www.linkedin.com/in/omoena">
+              {"https://www.linkedin.com/in/omoena"}
+            </a>
+          </div>
+        </Grid>
+        <Grid item xs={12} md={4}>
+          <div className={classes.subTitle}>
+            <img src={github} className={classes.img} />
+            <a href="https://github.com/oswmoena">
+              {"https://github.com/oswmoena"}
+            </a>
+          </div>
+        </Grid>
+      </Grid>
+    </div>
   );
 };
