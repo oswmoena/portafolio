@@ -1,0 +1,58 @@
+import ReactIcon from "../assets/icons/react.png";
+import SpringIcon from "../assets/icons/spring.png";
+import RailsIcon from "../assets/icons/rails.png";
+import AngularIcon from "../assets/icons/angular.svg";
+import NodeIcon from "../assets/icons/node.svg";
+
+export const skills = [
+  {
+    active: false,
+    skill: "react",
+    img: ReactIcon,
+    title: "ReactJs",
+    level: 3,
+    time: "Desde Febrero del 2020 a la actualidad",
+    description:
+      "Llevo aprendiendo y aplicando conocimientos en React desde Febrero del 2020, a la fecha sigo con él y la verdad, es que es mi punto más fuerte entre todos las tecnologías mencionadas, me encanta y me gustaría seguir aprendiendolo y poniendolo en práctica en soluciones que ameriten su uso.",
+  },
+  {
+    active: false,
+    skill: "node",
+    img: NodeIcon,
+    title: "NodeJs",
+    level: 1,
+    time: "Tiempos libres",
+    description:
+      "Es una tecnología que aprendo y ejecuto escasamente, pero a su vez, es un obejtivo personal para lograr aprender y dominar el stac JavaScript, la mayoria de los proyectos que comienzo con ReactJs, so pensados para que el Backend sea desarrollado en NodeJs, por lo que e especialmente atractivo para mi aprenderlo y ejecutarlo a nivel básic o el nivel de conocimiento que posea en ese momento.",
+  },
+  {
+    active: false,
+    skill: "angular",
+    img: AngularIcon,
+    title: "Angular",
+    level: 2,
+    time: "Desde Febrero 2019 a Febrero del 2020",
+    description:
+      "Angular fué el primer lenguaje web que aprendí, lo utilicé por un año mientras colaboraba para mi trabajo en SCD, el año 2021 colaboré con un grupo de amigos e la construcción de una aplicación web en este lenguaje, si bien no me dedic actualmente a ello, mi nivel de conocimiento va de la mano con lo aprendido e ReactJs. ",
+  },
+  {
+    active: false,
+    skill: "spring",
+    img: SpringIcon,
+    title: "Spring Boot",
+    level: 1,
+    time: "Desde Febrero 2019 a Febrero del 2020",
+    description:
+      "El conocimiento aprendido en spring boot fué fuerte mientras colaboraba para mi trabajo en SCD, sin embargo, no lo volví a utilizar luego de ese trabajo, por lo que, si bien conozco la sintaxis y puedo leer código de este framework, necesitaría un breve periodo de aprendizaje para utilizarlo nuevamente.",
+  },
+  {
+    active: false,
+    skill: "rails",
+    img: RailsIcon,
+    title: "Ruby on Rails",
+    level: 1,
+    time: "Desde Febrero del 2020 a Diciembre del 2020",
+    description:
+      "Ruby on rails fué una experiencia de un año en mi colaboración en PiikApp, hice mantenciones y features a una aplicación ya creada que provee servicios a una web de la empresa, al igual que en spring, no volvi a utilizarlo, ya que quiera enfocar mis futuras API's al stack en Javascript.",
+  },
+];

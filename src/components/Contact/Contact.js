@@ -1,6 +1,5 @@
 import React from "react";
 import {
-  Container,
   createStyles,
   Typography,
   makeStyles,
@@ -56,13 +55,13 @@ export const Contact = () => {
       <Grid container spacing={3} justify="space-between">
         <Grid item xs={12} md={4}>
           <div className={classes.subTitle}>
-            <img src={gmail} className={classes.img} />
+            <img src={gmail} alt="gmail" className={classes.img} />
             {"oswmoena@gmail.com"}
           </div>
         </Grid>
         <Grid item xs={12} md={4}>
           <div className={classes.subTitle}>
-            <img src={linkedin} className={classes.img} />
+            <img src={linkedin} alt="linkedin" className={classes.img} />
             <a href="https://www.linkedin.com/in/omoena">
               {"https://www.linkedin.com/in/omoena"}
             </a>
@@ -70,7 +69,7 @@ export const Contact = () => {
         </Grid>
         <Grid item xs={12} md={4}>
           <div className={classes.subTitle}>
-            <img src={github} className={classes.img} />
+            <img src={github} alt="github" className={classes.img} />
             <a href="https://github.com/oswmoena">
               {"https://github.com/oswmoena"}
             </a>

@@ -1,17 +1,8 @@
-import { createStyles, makeStyles } from "@material-ui/core";
-import ReactIcon from "../../assets/icons/react.png";
-import SpringIcon from "../../assets/icons/spring.png";
-import RailsIcon from "../../assets/icons/rails.png";
-import AngularIcon from "../../assets/icons/angular.svg";
-import NodeIcon from "../../assets/icons/node.svg";
 import React, { useState } from "react";
-import {
-  AngularInfoDialog,
-  NodeInfoDialog,
-  RailsInfoDialog,
-  ReactInfoDialog,
-  SpringInfoDialog,
-} from "..";
+import { createStyles, makeStyles } from "@material-ui/core";
+import { skills } from "../../constants/skills";
+import { DialogSkill } from "./DialogSkill";
+import notFound from "../../assets/images/notFound.png";
 
 const useStyles = makeStyles(() =>
   createStyles({
@@ -22,13 +13,14 @@ const useStyles = makeStyles(() =>
       display: "flex",
       alignItems: "center",
       justifyContent: "space-between",
-      maxWidth: '100%',
-      overflow: 'auto',
+      maxWidth: "100%",
+      overflow: "auto",
     },
     img: {
       maxHeight: "150px",
       maxWidth: "150px",
       width: "150px",
+      height: "150px",
       transition: "0.5s",
       borderRadius: "20%",
       "&:hover": {
@@ -41,84 +33,36 @@ const useStyles = makeStyles(() =>
     },
   })
 );
-const INIT_DIALOG = {
-  react: false,
-  node: false,
-  angular: false,
-  spring: false,
-  rails: false,
-};
+
 export const Skills = () => {
   const classes = useStyles();
-  const [dialog, setDialog] = useState(INIT_DIALOG);
-
-  const { react, node, angular, spring, rails } = dialog;
+  const [skillsList, setSkillList] = useState(skills);
 
   const handleOpenDialog = (value) => {
-    setDialog({
-      ...dialog,
-      [value]: true,
-    });
+    let valueSkill = skillsList.indexOf(value);
+
+    setSkillList(skillsList.map((skill) => skill === value && { ...skillsList[valueSkill], active: true }));
   };
 
   const handleCloseDialog = () => {
-    setDialog(INIT_DIALOG);
+    setSkillList(skills);
   };
 
   return (
     <div>
       <h1>Te presento mis habilidades</h1>
-      <p>
-        pst! haz click sobre alguna de las imagenes de acontinuación para ver
-        más detalles!
-      </p>
+      <p>pst! haz click sobre alguna de las imagenes de acontinuación para ver más detalles!</p>
       <div className={classes.images}>
-        <p>
-          <img
-            src={ReactIcon}
-            className={classes.img}
-            alt="React"
-            onClick={() => handleOpenDialog("react")}
-          />
-        </p>
-        <p>
-          <img
-            src={NodeIcon}
-            className={classes.img}
-            alt="Node"
-            onClick={() => handleOpenDialog("node")}
-          />
-        </p>
-        <p>
-          <img
-            src={SpringIcon}
-            className={classes.img}
-            alt="Spring"
-            onClick={() => handleOpenDialog("spring")}
-          />
-        </p>
-        <p>
-          <img
-            src={AngularIcon}
-            className={classes.img}
-            alt="Angular"
-            onClick={() => handleOpenDialog("angular")}
-          />
-        </p>
-        <p>
-          <img
-            src={RailsIcon}
-            className={classes.img}
-            alt="Rails"
-            onClick={() => handleOpenDialog("rails")}
-          />
-        </p>
+        {skillsList.map((skill) => (
+          <p>
+            <img src={skill.img ? skill.img : notFound} className={classes.img} alt={skill.title} onClick={() => handleOpenDialog(skill)} />
+            <DialogSkill open={skill.active} close={handleCloseDialog} title={skill.title} time={skill.time} description={skill.description} level={skill.level} />
+          </p>
+        ))}
       </div>
-      <ReactInfoDialog open={react} close={handleCloseDialog} />
-      <NodeInfoDialog open={node} close={handleCloseDialog} />
-      <SpringInfoDialog open={spring} close={handleCloseDialog} />
-      <AngularInfoDialog open={angular} close={handleCloseDialog} />
-      <RailsInfoDialog open={rails} close={handleCloseDialog} />
+      {/* {skillsList.map((skill) => (
+        <DialogSkill open={skill.active} close={handleCloseDialog} title={skill.title} time={skill.time} description={skill.description} level={skill.level} />
+      ))} */}
     </div>
   );
 };

@@ -5,10 +5,7 @@ import { makeStyles, createStyles } from "@material-ui/core";
 
 const useStyles = makeStyles(() =>
   createStyles({
-    full: {
-      color: "#123047",
-    },
-    empty: {
+    circle: {
       color: "#123047",
     },
   })
@@ -16,16 +13,14 @@ const useStyles = makeStyles(() =>
 
 export const LevelSkills = (props) => {
   const classes = useStyles();
-  const { full, empty } = props;
+  const { full } = props;
+  // const { full, empty } = props;
 
   return (
     <div>
-      {Array.apply(null, { length: full }).map((e, i) => (
-        <FiberManualRecordIcon className={classes.full} key={i} />
-      ))}
-      {Array.apply(null, { length: empty }).map((e, i) => (
-        <FiberManualRecordOutlinedIcon className={classes.empty} key={i} />
-      ))}
+      {Array.apply(null, { length: 5 }).map((e, i) => {
+        return full >= i + 1 ? <FiberManualRecordIcon className={classes.circle} key={i} /> : <FiberManualRecordOutlinedIcon className={classes.circle} key={i} />;
+      })}
     </div>
   );
 };
