@@ -6,6 +6,7 @@ import { Home } from "./views/Home";
 import "./App.css";
 
 export const App = () => {
+  
   return (
     <SnackbarProvider>
       <ThemeProvider theme={MainColor}>

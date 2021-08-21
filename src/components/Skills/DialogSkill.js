@@ -9,8 +9,6 @@ import { LevelSkills } from "./LevelSkills";
 const useStyles = makeStyles((theme) =>
   createStyles({
     content: {
-      position: "fixed",
-      zIndex: 99,
       "& p": {
         fontSize: "18px",
       },
@@ -76,7 +74,6 @@ export const DialogSkill = ({ open, close, title, time, description, level }) =>
           </Grid>
           <Grid item xs={6} md={10}>
             <LevelSkills full={level} />
-            {/* <LevelSkills full={3} empty={2} /> */}
           </Grid>
         </Grid>
       </DialogContent>

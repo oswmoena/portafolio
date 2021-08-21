@@ -14,8 +14,7 @@ const useStyles = makeStyles(() =>
 export const LevelSkills = (props) => {
   const classes = useStyles();
   const { full } = props;
-  // const { full, empty } = props;
-
+  
   return (
     <div>
       {Array.apply(null, { length: 5 }).map((e, i) => {

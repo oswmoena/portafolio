@@ -47,12 +47,7 @@ export const Career = () => {
       <Container maxWidth="md">
         <Timeline align="alternate">
           {jobs.map((job, index) => (
-            <TimelineCard
-              time={job.time}
-              title={job.title}
-              description={job.description}
-              index={index}
-            />
+            <TimelineCard time={job.time} title={job.title} description={job.description} index={index} detail={job.details} />
           ))}
         </Timeline>
       </Container>
