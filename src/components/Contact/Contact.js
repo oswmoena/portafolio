@@ -1,10 +1,5 @@
 import React from "react";
-import {
-  createStyles,
-  Typography,
-  makeStyles,
-  Grid,
-} from "@material-ui/core";
+import { createStyles, Typography, makeStyles, Grid } from "@material-ui/core";
 import gmail from "../../assets/icons/gmail.png";
 import linkedin from "../../assets/icons/linkedin.png";
 import github from "../../assets/icons/github.png";
@@ -47,32 +42,32 @@ const useStyles = makeStyles(() =>
 export const Contact = () => {
   const classes = useStyles();
 
+  const handleClick = (value) => {
+    window.gtag("event", value);
+  };
+
   return (
     <div>
       <Typography component="h3" variant="h3" className={classes.title}>
         {"Contacto"}
       </Typography>
       <Grid container spacing={3} justify="space-between">
-        <Grid item xs={12} md={4}>
+        <Grid item xs={12} md={4} onClick={() => handleClick('gmail')}>
           <div className={classes.subTitle}>
             <img src={gmail} alt="gmail" className={classes.img} />
             {"oswmoena@gmail.com"}
           </div>
         </Grid>
-        <Grid item xs={12} md={4}>
+        <Grid item xs={12} md={4} onClick={() => handleClick('linkedin')}>
           <div className={classes.subTitle}>
             <img src={linkedin} alt="linkedin" className={classes.img} />
-            <a href="https://www.linkedin.com/in/omoena">
-              {"https://www.linkedin.com/in/omoena"}
-            </a>
+            <a href="https://www.linkedin.com/in/omoena">{"https://www.linkedin.com/in/omoena"}</a>
           </div>
         </Grid>
-        <Grid item xs={12} md={4}>
+        <Grid item xs={12} md={4} onClick={() => handleClick('github')}>
           <div className={classes.subTitle}>
             <img src={github} alt="github" className={classes.img} />
-            <a href="https://github.com/oswmoena">
-              {"https://github.com/oswmoena"}
-            </a>
+            <a href="https://github.com/oswmoena">{"https://github.com/oswmoena"}</a>
           </div>
         </Grid>
       </Grid>

@@ -39,6 +39,7 @@ export const Skills = () => {
   const [skillsList, setSkillList] = useState(skills);
 
   const handleOpenDialog = (value) => {
+    window.gtag("event", value.title);
     let valueSkill = skillsList.indexOf(value);
 
     setSkillList(skillsList.map((skill) => skill === value && { ...skillsList[valueSkill], active: true }));
@@ -60,9 +61,6 @@ export const Skills = () => {
           </p>
         ))}
       </div>
-      {/* {skillsList.map((skill) => (
-        <DialogSkill open={skill.active} close={handleCloseDialog} title={skill.title} time={skill.time} description={skill.description} level={skill.level} />
-      ))} */}
     </div>
   );
 };
