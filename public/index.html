@@ -22,6 +22,8 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <title>Oswall Moena</title>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id="+%REACT_APP_GOOGLE_MAPS%></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag() {
@@ -29,7 +31,7 @@
       }
       gtag("js", new Date());
 
-      gtag("config", "G-QG3X7R37VW");
+      gtag("config",%REACT_APP_GOOGLE_MAPS%);
     </script>
   </head>
   <body>
