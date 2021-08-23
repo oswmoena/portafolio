@@ -7,7 +7,7 @@ import github from "../../assets/icons/github.png";
 const useStyles = makeStyles(() =>
   createStyles({
     container: {
-      //   padding: "3%",
+        paddingBottom: "3%",
     },
     title: {
       fontFamily: "Lato",
@@ -47,7 +47,7 @@ export const Contact = () => {
   };
 
   return (
-    <div>
+    <div className={classes.container}>
       <Typography component="h3" variant="h3" className={classes.title}>
         {"Contacto"}
       </Typography>
