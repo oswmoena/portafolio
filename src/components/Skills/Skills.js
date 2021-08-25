@@ -1,8 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { createStyles, makeStyles } from "@material-ui/core";
 import { skills } from "../../constants/skills";
+import { skills_EN } from "../../constants/skills_EN";
 import { DialogSkill } from "./DialogSkill";
 import notFound from "../../assets/images/notFound.png";
+import { LangContext } from "../../context/lang";
 
 const useStyles = makeStyles(() =>
   createStyles({
@@ -36,7 +38,23 @@ const useStyles = makeStyles(() =>
 
 export const Skills = () => {
   const classes = useStyles();
-  const [skillsList, setSkillList] = useState(skills);
+  const {
+    state: { language },
+    dispatch: { translate },
+  } = useContext(LangContext);
+  
+  const renderSkills = () => {
+    switch (language) {
+      case "en_US":
+        return skills_EN;
+      case "es_ES":
+        return skills;
+      default:
+        return skills;
+    }
+  };
+
+  const [skillsList, setSkillList] = useState(renderSkills());
 
   const handleOpenDialog = (value) => {
     window.gtag("event", value.title);
@@ -51,8 +69,8 @@ export const Skills = () => {
 
   return (
     <div>
-      <h1>Te presento mis habilidades</h1>
-      <p>pst! haz click sobre alguna de las imagenes de acontinuación para ver más detalles!</p>
+      <h1>{translate("SKILLS_title")}</h1>
+      <p>{translate("SKILLS_subtitle")}</p>
       <div className={classes.images}>
         {skillsList.map((skill) => (
           <p>

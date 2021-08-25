@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
 import { createStyles, Typography, makeStyles, Grid } from "@material-ui/core";
 import gmail from "../../assets/icons/gmail.png";
 import linkedin from "../../assets/icons/linkedin.png";
 import github from "../../assets/icons/github.png";
+import { LangContext } from "../../context/lang";
 
 const useStyles = makeStyles(() =>
   createStyles({
@@ -41,7 +42,9 @@ const useStyles = makeStyles(() =>
 
 export const Contact = () => {
   const classes = useStyles();
-
+  const {
+    dispatch: { translate },
+  } = useContext(LangContext);
   const handleClick = (value) => {
     window.gtag("event", value);
   };
@@ -49,7 +52,7 @@ export const Contact = () => {
   return (
     <div className={classes.container}>
       <Typography component="h3" variant="h3" className={classes.title}>
-        {"Contacto"}
+        {translate("CONTACT_title")}
       </Typography>
       <Grid container spacing={3} justify="space-between">
         <Grid item xs={12} md={4} onClick={() => handleClick('gmail')}>

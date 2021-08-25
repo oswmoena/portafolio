@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useContext } from "react";
 import { createStyles, Grid, makeStyles } from "@material-ui/core";
 import ProfileImage from "../../assets/images/perfil.jpeg";
+import { LangContext } from "../../context/lang";
 
 const useStyles = makeStyles(() =>
   createStyles({
@@ -20,29 +21,19 @@ const useStyles = makeStyles(() =>
 
 export const AboutMe = () => {
   const classes = useStyles();
-
+  const {
+    dispatch: { translate },
+  } = useContext(LangContext);
   return (
     <div>
       <Grid container>
         <Grid item xs={12} md={8}>
-          <h1>Quien?</h1>
-          <p className={classes.text}>
-            Mi nombre es Oswall Moena, soy una persona que se dedica al
-            desarrollo de software.
-          </p>
-          <p className={classes.text}>
-            Me encanta mi profesión y los desafíos que ella conlleva. En mis tiempos
-            libres me gusta ver series, películas, anime, jugar videojuegos,
-            reír y también, perfeccionarme en lo hago a través del aprendizaje
-            constante de nuevas herramientas.
-          </p>
+          <h1>{translate("ABOUTME_title")}</h1>
+          <p className={classes.text}>{translate("ABOUTME_subtitle1")}</p>
+          <p className={classes.text}>{translate("ABOUTME_subtitle2")}</p>
         </Grid>
         <Grid item xs={12} md={4} className={classes.gridImg}>
-          <img
-            src={ProfileImage}
-            alt="Oswall Moena"
-            className={classes.profileImg}
-          />
+          <img src={ProfileImage} alt="Oswall Moena" className={classes.profileImg} />
         </Grid>
       </Grid>
     </div>

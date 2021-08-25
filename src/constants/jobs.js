@@ -20,7 +20,7 @@ export const jobs = [
   {
     title: "Everis Temuco",
     time: "2018 - 2019",
-    description: "ETL Developer",
+    description: "Desarrollador ETL",
     details: "Primer trabajo formal, en donde me desmpeñé como desarrollador en Bussiness Intelligence, creando ETL's en PowerCenter para el banco Santander de Murcia.",
   },
 ];
