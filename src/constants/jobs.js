@@ -8,7 +8,7 @@ export const jobs = [
   {
     title: "PiikApp",
     time: "2020",
-    description: "Desarrollador Angular 7+ & SpringBoot",
+    description: "Desarrollador ReactJs & Ruby on Rails",
     details: "Me desmpeñé como desarrollador de software en ReactJs y Ruby on Rails, en donde hice mantenciones a la API del negocio y página web del mismo, además de crear una plataforma de administración general del negocio.",
   },
   {
