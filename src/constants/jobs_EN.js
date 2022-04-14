@@ -1,7 +1,13 @@
 export const jobs_EN = [
   {
+    title: "Mobdev",
+    time: "2022 - now",
+    description: "ReactJs developer",
+    details: "As part of this external business, I provided services for Scotiabank de Chile, in a cell where I worked on solving problems with the tools already implemented, or making changes that did not exceed 2 weeks.",
+  },
+  {
     title: "Devaid",
-    time: "2020 - now",
+    time: "2020 - 2022",
     description: "ReactJs developer",
     details: "I have worked as a ReactJs developer, where I have done maintenance on an already created 'ticketera' application, in addition, I have created a route management application from scratch.",
   },

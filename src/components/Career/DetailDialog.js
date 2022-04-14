@@ -5,6 +5,7 @@ import DevaidLogo from "../../assets/icons/DevaidLogo.png";
 import EverisLogo from "../../assets/icons/EverisLogo.png";
 import SCDLogo from "../../assets/icons/SCDLogo.png";
 import PiikApp from "../../assets/icons/PiikApp.svg";
+import MobdevLogo from "../../assets/icons/mobdev.png";
 import NotFound from "../../assets/images/notFound.png";
 
 const useStyles = makeStyles((theme) =>
@@ -88,6 +89,8 @@ export const DetailDialog = ({ open, close, title, time, detail }) => {
         return SCDLogo;
       case "Everis Temuco":
         return EverisLogo;
+      case "Mobdev":
+        return MobdevLogo;
       default:
         return NotFound;
     }
