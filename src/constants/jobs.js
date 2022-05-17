@@ -3,7 +3,7 @@ export const jobs = [
     title: "Mobdev",
     time: "2022 - Actualidad",
     description: "Desarrollador ReactJs",
-    details: "Como parte de una empresa externa, presté servicios para el banco Scotiabank de Chile, en una célula en donde mayormente me desmpeñé en la resolución de problemas con las herramientas que ya estaban implementadas, o hacer cambios que no superaran las 2 semanas",
+    details: "Como parte de una empresa externa, presté servicios para el banco Scotiabank de Chile, en una célula en donde mayormente me desempeñé en la resolución de problemas con las herramientas que ya estaban implementadas, o hacer cambios que no superen las 2 semanas",
   },
   {
     title: "Devaid",

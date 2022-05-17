@@ -79,8 +79,9 @@ export const Home = () => {
   const Sections = {
     0: <Skills />,
     1: <Career />,
-    2: <Projects />,
-    3: <Contact />,
+    2: <Contact />,
+    // 2: <Projects />,
+    // 3: <Contact />,
   }
 
   return (
