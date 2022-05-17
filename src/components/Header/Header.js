@@ -11,20 +11,15 @@ const useStyles = makeStyles(() =>
       backgroundColor: "red",
     },
     gridContainer: {
-      //   padding: "2rem",
-      //   background: "linear-gradient(to left, black 40%, white)",
       backgroundColor: "#D6D7D9",
     },
     gridTest1: {
       display: "flex",
       flexDirection: "column",
       alignItems: "flex-end",
-      //   backgroundColor: "blue",
       fontSize: "140px",
     },
     gridTest2: {
-      //   backgroundColor: "green",
-      //   background: "linear-gradient(to right, black 40%, white)",
       display: "flex",
       alignItems: "flex-end",
       textAlign: "right",
@@ -36,10 +31,12 @@ const useStyles = makeStyles(() =>
 export const Header = () => {
   const classes = useStyles();
   const {
+    // eslint-disable-next-line 
     state: { language },
     dispatch: { setLanguage, translate },
   } = useContext(LangContext);
 
+  // eslint-disable-next-line
   const chooseLang = (value) => {
     setLanguage(value);
   };

@@ -3,8 +3,8 @@ import CloseIcon from "@material-ui/icons/Close";
 import React from "react";
 import { createStyles, makeStyles } from "@material-ui/core";
 import DateRangeIcon from "@material-ui/icons/DateRange";
-import TrendingUpIcon from "@material-ui/icons/TrendingUp";
-import { LevelSkills } from "./LevelSkills";
+// import TrendingUpIcon from "@material-ui/icons/TrendingUp";
+// import { LevelSkills } from "./LevelSkills";
 
 const useStyles = makeStyles((theme) =>
   createStyles({
@@ -68,13 +68,13 @@ export const DialogSkill = ({ open, close, title, time, description, level }) =>
           <Grid item xs={6} md={10}>
             <span className={classes.infoDetails}>{time}</span>
           </Grid>
-          <Grid item xs={6} md={2} className={classes.title}>
+          {/* <Grid item xs={6} md={2} className={classes.title}>
             <TrendingUpIcon />
             <span>Nivel</span>:
           </Grid>
           <Grid item xs={6} md={10}>
             <LevelSkills full={level} />
-          </Grid>
+          </Grid> */}
         </Grid>
       </DialogContent>
       <DialogActions disableSpacing classes={{ root: classes.custDialogActions }}>

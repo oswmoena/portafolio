@@ -12,5 +12,9 @@
 
   "CAREER_title": "Carrera",
 
+  "PROJECTS_title":"Proyectos",
+  "PROJECTS_subtitle":"Te presento algunos de mis proyectos, si quieres ver el código, te recomiendo visitar mi GitHub, el cual puedes encontrar ",
+  "PROJECTS_here":"aquí",
+
   "CONTACT_title": "Contacto"
 }

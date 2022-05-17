@@ -20,18 +20,6 @@ const useStyles = makeStyles(() =>
       justifyContent: "center",
       alignContent: "center",
       alignItems: "center",
-      "& :link": {
-        color: "#000000",
-        textDecoration: "none",
-      },
-      "& :visited": {
-        color: "#000000",
-        textDecoration: "none",
-      },
-      "& :hover": {
-        color: "#000000",
-        textDecoration: "none",
-      },
     },
     img: {
       width: "8%",
