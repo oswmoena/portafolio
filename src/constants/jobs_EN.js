@@ -1,7 +1,13 @@
 export const jobs_EN = [
   {
+    title: "CMPC",
+    time: "2022 - Present",
+    description: "Reactjs developer",
+    details: "Part of the innovation team, in charge of digitizing processes and creating a world class and use platform where customer contact with the company can be modernized.",
+  },
+  {
     title: "Mobdev",
-    time: "2022 - now",
+    time: "2022",
     description: "ReactJs developer",
     details: "As part of this external business, I provided services for Scotiabank de Chile, in a cell where I worked on solving problems with the tools already implemented, or making changes that did not exceed 2 weeks.",
   },

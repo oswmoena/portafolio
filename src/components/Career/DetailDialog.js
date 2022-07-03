@@ -6,6 +6,7 @@ import EverisLogo from "../../assets/icons/EverisLogo.png";
 import SCDLogo from "../../assets/icons/SCDLogo.png";
 import PiikApp from "../../assets/icons/PiikApp.svg";
 import MobdevLogo from "../../assets/icons/mobdev.png";
+import CMPCLogo from "../../assets/icons/cmpc.png";
 import NotFound from "../../assets/images/notFound.png";
 
 const useStyles = makeStyles((theme) =>
@@ -91,6 +92,8 @@ export const DetailDialog = ({ open, close, title, time, detail }) => {
         return EverisLogo;
       case "Mobdev":
         return MobdevLogo;
+      case "CMPC":
+        return CMPCLogo;
       default:
         return NotFound;
     }

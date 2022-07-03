@@ -1,7 +1,13 @@
 export const jobs = [
   {
-    title: "Mobdev",
+    title: "CMPC",
     time: "2022 - Actualidad",
+    description: "Desarrollador ReactJs",
+    details: "Parte del equipo de innovación, encargados de digitalizar procesos y crear una plataforma de clase y uso mundial en donde se pueda modernizar el contacto del cliente con la empresa.",
+  },
+  {
+    title: "Mobdev",
+    time: "2022",
     description: "Desarrollador ReactJs",
     details: "Como parte de una empresa externa, presté servicios para el banco Scotiabank de Chile, en una célula en donde mayormente me desempeñé en la resolución de problemas con las herramientas que ya estaban implementadas, o hacer cambios que no superen las 2 semanas",
   },

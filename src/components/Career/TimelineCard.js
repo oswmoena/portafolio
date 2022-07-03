@@ -15,6 +15,7 @@ const useStyles = makeStyles((theme) =>
       "& :hover": {
         cursor: "pointer",
         backgroundColor: "#D6D7DA",
+        color: 'black',
       },
     },
     contentDate: {
