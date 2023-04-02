@@ -3,10 +3,12 @@ import SpringIcon from "../assets/icons/spring.png";
 import RailsIcon from "../assets/icons/rails.png";
 import AngularIcon from "../assets/icons/angular.svg";
 import NodeIcon from "../assets/icons/node.svg";
+import PythonIcon from "../assets/icons/python.png";
 
 export const skills_EN = [
   {
     active: false,
+    show: true,
     skill: "react",
     img: ReactIcon,
     title: "ReactJs",
@@ -17,6 +19,7 @@ export const skills_EN = [
   },
   {
     active: false,
+    show: true,
     skill: "node",
     img: NodeIcon,
     title: "NodeJs",
@@ -27,6 +30,7 @@ export const skills_EN = [
   },
   {
     active: false,
+    show: true,
     skill: "angular",
     img: AngularIcon,
     title: "Angular",
@@ -37,6 +41,7 @@ export const skills_EN = [
   },
   {
     active: false,
+    show: false,
     skill: "spring",
     img: SpringIcon,
     title: "Spring Boot",
@@ -47,6 +52,7 @@ export const skills_EN = [
   },
   {
     active: false,
+    show: false,
     skill: "rails",
     img: RailsIcon,
     title: "Ruby on Rails",
@@ -54,5 +60,17 @@ export const skills_EN = [
     time: "From february 2020 a Diciembre del 2020",
     description:
       "Ruby on rails was an experience of a year in my collaboration in PiikApp, I did maintenance and features to an already created application that provides services to a company website, as in spring, I did not use it again, since I wanted to focus my future API's to the stack in Javascript.",
+  },
+  ,
+  {
+    active: false,
+    show: true,
+    skill: "python",
+    img: PythonIcon,
+    title: "Python",
+    level: 1,
+    time: "Free times",
+    description:
+      "Python develops it in learning times, it is the most recent that I have learned and currently develop small projects with the goal of making a subtage that feeds other projects.",
   },
 ];

@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { createStyles, Grid, makeStyles } from "@material-ui/core";
 import { LangContext } from "../../context/lang";
+import Typed from 'react-typed';
 
 const useStyles = makeStyles(() =>
   createStyles({
@@ -51,7 +52,14 @@ export const Header = () => {
           <div style={{ fontSize: "60px", textAlign: "left" }}>
             {translate("HEADER_title2")}
           </div>
-          <div style={{ fontSize: "80px", textAlign: "left" }}>{translate("HEADER_name")}</div>
+          <div style={{ fontSize: "80px", textAlign: "left" }}>
+            <Typed
+              strings={[translate("HEADER_name"), translate("HEADER_specialist")]}
+              typeSpeed={80}
+              loop
+            />
+          </div>
+          {/* <div style={{ fontSize: "80px", textAlign: "left" }}>{translate("HEADER_name")}</div> */}
         </Grid>
       </Grid>
     </div>
