@@ -42,7 +42,7 @@ export const Skills = () => {
     state: { language },
     dispatch: { translate },
   } = useContext(LangContext);
-  
+
   const renderSkills = () => {
     switch (language) {
       case "en_US":
@@ -72,7 +72,7 @@ export const Skills = () => {
       <h1>{translate("SKILLS_title")}</h1>
       <p>{translate("SKILLS_subtitle")}</p>
       <div className={classes.images}>
-        {skillsList.map((skill) => (
+        {skillsList.map((skill) => skill.show && (
           <p>
             <img src={skill.img ? skill.img : notFound} className={classes.img} alt={skill.title} onClick={() => handleOpenDialog(skill)} />
             <DialogSkill open={skill.active} close={handleCloseDialog} title={skill.title} time={skill.time} description={skill.description} level={skill.level} />
