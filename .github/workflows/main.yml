@@ -20,3 +20,6 @@ jobs:
           username: ${{ secrets.ftp_username }}
           password: ${{ secrets.ftp_password }}
           server_dir: /front/portafolio
+
+      - name: Executing PM2
+        run: pm2 restart all
