@@ -2,20 +2,15 @@
   "HEADER_title1": "Hi!",
   "HEADER_title2": "i'm",
   "HEADER_name": "Oswall Moena",
-  "HEADER_specialist": "Frontend dev",
-
+  "HEADER_specialist": "Fullstack dev",
   "ABOUTME_title": "Who?",
   "ABOUTME_subtitle1": "My name is Oswall Moena, i'm a Chilean software developer.",
   "ABOUTME_subtitle2": "I love my profession and its challenges. In my free time I like to watch series, movies, anime, play video games, laugh and improve myself through constant learning of new tools.",
-
   "SKILLS_title": "These are my skills :)",
   "SKILLS_subtitle": "pst! click on any of the images below to see more details!",
-
   "CAREER_title": "Career",
-
-  "PROJECTS_title":"Projects",
-  "PROJECTS_subtitle":"I present you some of my projects, if you want to watch the code,i recommend you to visit my GitHub, it is ",
-  "PROJECTS_here":"here",
-
+  "PROJECTS_title": "Projects",
+  "PROJECTS_subtitle": "I present you some of my projects, if you want to watch the code,i recommend you to visit my GitHub, it is ",
+  "PROJECTS_here": "here",
   "CONTACT_title": "Contact me"
 }
